@@ -35,11 +35,10 @@ jobs:
       - name: Instalacja środowiska Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: 'npm'
+          node-version: 24
 
       - name: Instalacja zależności
-        run: npm ci
+        run: npm install
 
       - name: Sprawdzenie typów i poprawności (Lint)
         run: npm run lint --if-present
