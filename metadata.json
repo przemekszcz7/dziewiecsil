@@ -1,0 +1,6 @@
+{
+  "name": "Kapela Dziewięćsił Ognisko Muzyczne",
+  "description": "Ognisko Muzyczne Dziewięćsił w Czarnej Górze. Nauka gry na skrzypcach, basach i akordeonie w stylu regionalnym oraz nauka śpiewu góralskiego.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
