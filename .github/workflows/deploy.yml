@@ -1,0 +1,61 @@
+# Przebieg pracy (Workflow) GitHub Actions do automatycznego budowania i wdrożenia aplikacji
+# na GitHub Pages lub jako przygotowanie artefaktów produkcyjnych.
+#
+# Więcej szczegółów o wdrażaniu na GitHub Pages znajdziesz pod adresem:
+# https://pages.github.com/
+
+name: Budowanie i Wdrożenie Ogniska Muzycznego
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+# Nadanie uprawnień niezbędnych do wdrożenia na GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Unikanie nakładania się jednoczesnych wdrożeń
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Klonowanie repozytorium
+        uses: actions/checkout@v4
+
+      - name: Instalacja środowiska Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Instalacja zależności
+        run: npm ci
+
+      - name: Sprawdzenie typów i poprawności (Lint)
+        run: npm run lint --if-present
+
+      - name: Budowanie aplikacji produkcyjnej (Vite)
+        run: npm run build
+
+      # Krok opcjonalny: Wdrożenie na GitHub Pages (odkomentuj jeśli wdrażasz bezpośrednio na GitHub Pages)
+      - name: Konfiguracja stron GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: Przesłanie artefaktów wdrożenia
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+      - name: Wdrożenie na GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
