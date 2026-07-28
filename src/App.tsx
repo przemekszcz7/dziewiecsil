@@ -33,19 +33,19 @@ export default function App() {
 
         <div className="flex flex-col gap-6 text-lg font-sans font-medium text-wood-mid mt-12">
           <a href="#o-nas" className="hover:text-wood-warm transition-colors py-2 border-b border-cream-border/40">
-            O Nas
+            O Kapeli
           </a>
           <a href="#nauka" className="hover:text-wood-warm transition-colors py-2 border-b border-cream-border/40">
-            Nauka gry i śpiewu
+            Występy i Nauka
           </a>
           <a href="#galeria" className="hover:text-wood-warm transition-colors py-2 border-b border-cream-border/40">
-            Galeria zdjęć
+            Galeria
           </a>
           <a href="#godziny" className="hover:text-wood-warm transition-colors py-2 border-b border-cream-border/40">
-            Godziny zajęć
+            Godziny prób
           </a>
           <a href="#kontakt" className="hover:text-wood-warm transition-colors py-2 border-b border-cream-border/40">
-            Kontakt i zapisy
+            Kontakt i rezerwacja
           </a>
           
           <a 
@@ -65,24 +65,24 @@ export default function App() {
           <a href="#" className="flex items-center gap-3 group">
             <img 
               src="https://i.ibb.co/7x7yp5q2/689017777-827609407086771-8112193674280947656-n.jpg" 
-              alt="Logo Dziewięćsił" 
+              alt="Logo Kapela Dziewięćsił" 
               className="w-10 h-10 object-cover rounded-full border border-wood-warm group-hover:scale-105 transition-transform duration-300" 
             />
             <div className="flex flex-col leading-none">
-              <span className="font-sans font-light text-[10px] tracking-[0.2em] text-wood-dark uppercase">Ognisko Muzyczne</span>
+              <span className="font-sans font-light text-[10px] tracking-[0.2em] text-wood-dark uppercase">Kapela</span>
               <span className="font-caveat font-semibold text-2xl text-wood-warm mt-0.5">Dziewięćsił</span>
             </div>
           </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6 text-sm font-sans font-semibold text-wood-mid">
-            <a href="#o-nas" className="hover:text-wood-warm transition-colors">O Nas</a>
+            <a href="#o-nas" className="hover:text-wood-warm transition-colors">O Kapeli</a>
             <span className="text-cream-border select-none">·</span>
-            <a href="#nauka" className="hover:text-wood-warm transition-colors">Nauka</a>
+            <a href="#nauka" className="hover:text-wood-warm transition-colors">Oferta i Nauka</a>
             <span className="text-cream-border select-none">·</span>
             <a href="#galeria" className="hover:text-wood-warm transition-colors">Galeria</a>
             <span className="text-cream-border select-none">·</span>
-            <a href="#godziny" className="hover:text-wood-warm transition-colors">Godziny</a>
+            <a href="#godziny" className="hover:text-wood-warm transition-colors">Godziny Prób</a>
             <span className="text-cream-border select-none">·</span>
             <a href="#kontakt" className="hover:text-wood-warm transition-colors">Kontakt</a>
           </nav>
@@ -93,7 +93,7 @@ export default function App() {
               href="#kontakt" 
               className="px-5 py-2.5 border border-wood-warm rounded-full text-xs font-sans font-semibold tracking-widest text-wood-warm uppercase hover:bg-wood-warm hover:text-paper transition-all duration-300"
             >
-              Zapisz się
+              Skontaktuj się
             </a>
           </div>
 
@@ -135,26 +135,29 @@ export default function App() {
           </div>
 
           <h1 className="font-serif font-bold text-white leading-tight tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-2">
-            Ognisko Muzyczne
+            Kapela
           </h1>
           <div className="font-caveat font-semibold text-5xl sm:text-6xl md:text-7xl text-[#D4B078] mt-2 mb-6 select-none">
             Dziewięćsił
           </div>
 
           <p className="font-sans font-light text-cream-border text-base sm:text-lg md:text-xl leading-relaxed max-w-[680px] mb-10">
-            Nauka gry na skrzypcach, basach oraz akordeonie w stylu regionalnym. Pielęgnujemy tradycyjny śpiew góralski z pasją i szacunkiem dla spuścizny mistrzów.
+            Tradycyjna spiska i podhalańska muzyka góralska na żywo. Oprawa muzyczna wydarzeń oraz Ognisko Muzyczne — nauka gry na skrzypcach, basach, akordeonie i śpiewu z miłością do kulturowego dziedzictwa.
           </p>
 
           {/* Instrument Chips */}
           <div className="flex flex-wrap justify-center gap-2.5 sm:gap-3 mb-12">
             <span className="px-4 py-2 bg-wood-dark/60 border border-wood-warm/30 rounded-full text-xs sm:text-sm font-sans font-medium text-[#E4D8C4] flex items-center gap-2 backdrop-blur-xs">
+              Kapela na żywo
+            </span>
+            <span className="px-4 py-2 bg-wood-dark/60 border border-wood-warm/30 rounded-full text-xs sm:text-sm font-sans font-medium text-[#E4D8C4] flex items-center gap-2 backdrop-blur-xs">
+              Ognisko Muzyczne (Nauka)
+            </span>
+            <span className="px-4 py-2 bg-wood-dark/60 border border-wood-warm/30 rounded-full text-xs sm:text-sm font-sans font-medium text-[#E4D8C4] flex items-center gap-2 backdrop-blur-xs">
               Skrzypce regionalne
             </span>
             <span className="px-4 py-2 bg-wood-dark/60 border border-wood-warm/30 rounded-full text-xs sm:text-sm font-sans font-medium text-[#E4D8C4] flex items-center gap-2 backdrop-blur-xs">
-              Akordeon
-            </span>
-            <span className="px-4 py-2 bg-wood-dark/60 border border-wood-warm/30 rounded-full text-xs sm:text-sm font-sans font-medium text-[#E4D8C4] flex items-center gap-2 backdrop-blur-xs">
-              Tradycyjne Basy
+              Akordeon & Basy
             </span>
             <span className="px-4 py-2 bg-wood-dark/60 border border-wood-warm/30 rounded-full text-xs sm:text-sm font-sans font-medium text-[#E4D8C4] flex items-center gap-2 backdrop-blur-xs">
               Śpiew góralski
@@ -182,7 +185,7 @@ export default function App() {
         {/* Down Arrow Indicator */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 text-[#E4D8C4]/60 animate-bounce">
           <a href="#o-nas" className="flex flex-col items-center gap-1 hover:text-white transition-colors">
-            <span className="font-sans font-light text-[9px] tracking-widest uppercase">Poznaj naszą tradycję</span>
+            <span className="font-sans font-light text-[9px] tracking-widest uppercase">Poznaj naszą muzykę</span>
             <span className="text-lg">↓</span>
           </a>
         </div>
@@ -197,9 +200,9 @@ export default function App() {
           
           {/* Section Header */}
           <div className="text-center mb-16">
-            <span className="font-sans font-semibold text-[11px] tracking-[0.25em] text-wood-warm uppercase">Ognisko Muzyczne Dziewięćsił</span>
+            <span className="font-sans font-semibold text-[11px] tracking-[0.25em] text-wood-warm uppercase">Kapela Dziewięćsił</span>
             <h2 className="font-serif font-bold text-wood-dark text-3xl sm:text-4xl md:text-5xl mt-2 leading-tight">
-              Tradycja Przekazywana z Pokolenia na Pokolenie
+              Żywa Muzyka, Tradycja i Ognisko Muzyczne
             </h2>
             <div className="ornament">
               <span className="orn-line"></span>
@@ -214,23 +217,23 @@ export default function App() {
             {/* Left Column: Text & Plaque */}
             <div className="lg:col-span-7 flex flex-col gap-6 text-wood-mid font-sans leading-relaxed text-base sm:text-lg">
               <p className="font-serif italic text-wood-dark text-xl leading-relaxed">
-                „W naszej szkole uczymy muzyki tak, jak dawniej — ze słuchu, z serca i z temperamentu, który drzemie w każdym góralskim smyczku.”
+                „Muzyka góralska to serce naszego regionu. Pielęgnujemy dawne spiskie i podhalańskie nuty, grając na żywo oraz przekazując tę pasję młodemu pokoleniu.”
               </p>
               
               <p>
-                Ognisko Muzyczne <strong>Dziewięćsił</strong> w Czarnej Górze to wyjątkowe miejsce na mapie polskiego Spisza i Podhala. Naszą misją jest ocalenie od zapomnienia oraz żywe kultywowanie unikalnych tradycji muzycznych regionu Karpat. Uczymy dzieci, młodzież i dorosłych autentycznej, czystej gry na tradycyjnych instrumentach góralskich oraz śpiewu z „piersi” (głosem białym).
+                <strong>Kapela Dziewięćsił</strong> z Czarnej Góry to spiska kapela góralska, która z dumą prezentuje bogate dziedzictwo muzyczne Spisza, Podhala i całego regionu Tatr. Łączymy temperament, kunszt instrumentalny oraz autentyczny góralski śpiew, zapewniając niepowtarzalną oprawę muzyczną koncertów, uroczystości, wesel i wydarzeń kulturalnych.
               </p>
               
               <p>
-                Nasi uczniowie poznają nuty spiskie, podhalańskie oraz orawskie, zdobywają umiejętności sekundowania oraz improwizacji w kapeli. Dbamy o to, aby zajęcia były nie tylko nauką techniki gry, ale również głębokim spotkaniem z żywą kulturą, strojem regionalnym, gwarą i obyczajami naszych ojców.
+                Równolegle przy kapeli działa nasze <strong>Ognisko Muzyczne</strong> — przestrzeń tworzona z myślą o nauce gry na instrumentach regionalnych oraz śpiewu. Uczymy dzieci, młodzież i dorosłych autentycznych nut spiskich i podhalańskich, techniki sekundowania oraz wspólnego muzykowania w kapeli.
               </p>
 
               {/* Dark Wood Contact Card (Plaque) */}
               <div className="mt-6 p-8 bg-paper border border-cream-border rounded-[2px] wood-border relative overflow-hidden shadow-xs">
                 <div className="absolute top-0 left-0 w-2.5 h-full bg-wood-warm"></div>
-                <h3 className="font-serif font-semibold text-wood-dark text-xl mb-3">Chcesz zagrać z nami w kapeli?</h3>
+                <h3 className="font-serif font-semibold text-wood-dark text-xl mb-3">Zamów kapelę lub zapisz się do ogniska!</h3>
                 <p className="text-sm text-wood-mid mb-6 font-sans">
-                  Zajęcia dopasowujemy indywidualnie — zapraszamy zarówno osoby stawiające pierwsze kroki, jak i tych, którzy pragną dopracować swój warsztat i grać w tradycyjnym składzie.
+                  Niezależnie od tego, czy szukasz oprawy muzycznej na swoje wydarzenie, czy chcesz rozpocząć naukę gry i śpiewu — zapraszamy do serdecznego kontaktu.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
@@ -256,12 +259,12 @@ export default function App() {
               <div className="bg-paper border border-cream-border p-6 rounded-[2px] hover:shadow-md transition-all duration-300">
                 <div className="flex gap-4 items-start">
                   <span className="p-3 bg-linen rounded-[2px] text-wood-warm flex items-center justify-center">
-                    <Music className="w-5 h-5" />
+                    <Sparkles className="w-5 h-5" />
                   </span>
                   <div>
-                    <h3 className="font-serif font-bold text-wood-dark text-lg sm:text-xl">Skrzypce Regionalne</h3>
+                    <h3 className="font-serif font-bold text-wood-dark text-lg sm:text-xl">Występy Kapeli na Żywo</h3>
                     <p className="text-sm text-wood-mid mt-1 font-sans leading-relaxed">
-                      Nauka tradycyjnej gry spiskiej i podhalańskiej. Poznasz technikę smyczkowania, ozdobniki (drgawki, zaciągania) oraz autentyczny sekund.
+                      Tradycyjna oprawa muzyczna koncertów, imprez regionalnych, uroczystości i spotkań okolicznościowych w pełnym spiskim i podhalańskim stroju.
                     </p>
                   </div>
                 </div>
@@ -274,9 +277,9 @@ export default function App() {
                     <Music className="w-5 h-5" />
                   </span>
                   <div>
-                    <h3 className="font-serif font-bold text-wood-dark text-lg sm:text-xl">Akordeon</h3>
+                    <h3 className="font-serif font-bold text-wood-dark text-lg sm:text-xl">Nauka Gry na Skrzypcach</h3>
                     <p className="text-sm text-wood-mid mt-1 font-sans leading-relaxed">
-                      Nauka gry melodycznej i akompaniamentu kapeli. Tradycyjne spiskie polki, czardasze, walczyki oraz weselne i taneczne nuty.
+                      Lekcje w Ognisku Muzycznym — nauka nut spiskich i podhalańskich ze słuchu, techniki smyczkowania, ozdobników oraz autentycznego sekundowania.
                     </p>
                   </div>
                 </div>
@@ -289,9 +292,9 @@ export default function App() {
                     <Music className="w-5 h-5" />
                   </span>
                   <div>
-                    <h3 className="font-serif font-bold text-wood-dark text-lg sm:text-xl">Tradycyjne Basy</h3>
+                    <h3 className="font-serif font-bold text-wood-dark text-lg sm:text-xl">Akordeon i Basy Góralskie</h3>
                     <p className="text-sm text-wood-mid mt-1 font-sans leading-relaxed">
-                      Opanowanie basowania — rytmicznego i harmonicznego serca góralskiej muzyki. Gramy na tradycyjnych trzystrunowych basach.
+                      Opanowanie basowania oraz gry na akordeonie — spiskie polki, czardasze, walczyki oraz rytmiczny akompaniament kapeli.
                     </p>
                   </div>
                 </div>
@@ -306,7 +309,7 @@ export default function App() {
                   <div>
                     <h3 className="font-serif font-bold text-wood-dark text-lg sm:text-xl">Śpiew Góralski</h3>
                     <p className="text-sm text-wood-mid mt-1 font-sans leading-relaxed">
-                      Otwieranie naturalnego głosu (głos biały), nauka dawnych przyśpiewek, pieśni pasterskich, pytanych oraz tradycyjnej wielogłosowości.
+                      Pielęgnowanie dawnych przyśpiewek, pieśni pasterskich oraz nauka śpiewu białym głosem z tradycyjną góralską wielogłosowością.
                     </p>
                   </div>
                 </div>
@@ -327,9 +330,9 @@ export default function App() {
           
           {/* Section Header */}
           <div className="text-center mb-16">
-            <span className="font-sans font-semibold text-[11px] tracking-[0.25em] text-wood-warm uppercase">Nasze Wydarzenia i Wspomnienia</span>
+            <span className="font-sans font-semibold text-[11px] tracking-[0.25em] text-wood-warm uppercase">Kapela Dziewięćsił w Kadrze</span>
             <h2 className="font-serif font-bold text-wood-dark text-3xl sm:text-4xl md:text-5xl mt-2">
-              Tętniące Życiem Ognisko w Kadrze
+              Występy, Koncerty i Życie Ogniska
             </h2>
             <div className="ornament">
               <span className="orn-line"></span>
@@ -337,7 +340,7 @@ export default function App() {
               <span className="orn-line"></span>
             </div>
             <p className="text-wood-mid max-w-[540px] mx-auto font-sans text-sm mt-4 leading-relaxed">
-              Przeżyj z nami najpiękniejsze chwile: lekcje indywidualne, radosne próby, koncerty na tatrzańskich scenach, nagrania oraz góralskie śpiewogry.
+              Przeżyj z nami najpiękniejsze chwile: koncerty na tatrzańskich scenach, występy na uroczystościach, radosne próby kapeli oraz zajęcia w Ognisku Muzycznym.
             </p>
           </div>
 
@@ -619,9 +622,9 @@ export default function App() {
           
           {/* Section Header */}
           <div className="text-center mb-16">
-            <span className="font-sans font-semibold text-[11px] tracking-[0.25em] text-wood-warm uppercase">Dołącz do Dziewięćsiłu</span>
+            <span className="font-sans font-semibold text-[11px] tracking-[0.25em] text-wood-warm uppercase">Kontakt i Rezerwacja</span>
             <h2 className="font-serif font-bold text-wood-dark text-3xl sm:text-4xl md:text-5xl mt-2 leading-tight">
-              Rozpocznij Swoją Muzyczną Drogę
+              Zamów Kapelę lub Zapisz się na Lekcje
             </h2>
             <div className="ornament">
               <span className="orn-line"></span>
@@ -629,7 +632,7 @@ export default function App() {
               <span className="orn-line"></span>
             </div>
             <p className="text-wood-mid max-w-[540px] mx-auto font-sans text-sm mt-4 leading-relaxed">
-              Czekamy na Ciebie w Czarnej Górze! Skontaktuj się bezpośrednio z nami telefonicznie, napisz wiadomość e-mail lub odwiedź nas na naszych profilach społecznościowych.
+              Planujesz oprawę muzyczną wydarzenia? A może chcesz dołączyć do naszego Ogniska Muzycznego w Czarnej Górze? Skontaktuj się z nami telefonicznie lub e-mailowo!
             </p>
           </div>
 
@@ -748,16 +751,16 @@ export default function App() {
               <div className="flex items-center gap-3">
                 <img 
                   src="https://i.ibb.co/7x7yp5q2/689017777-827609407086771-8112193674280947656-n.jpg" 
-                  alt="Logo Dziewięćsił" 
+                  alt="Logo Kapela Dziewięćsił" 
                   className="w-12 h-12 object-cover rounded-full border-2 border-wood-warm" 
                 />
                 <div className="flex flex-col leading-none">
-                  <span className="font-sans font-semibold text-xs tracking-[0.25em] text-white uppercase">Ognisko Muzyczne</span>
+                  <span className="font-sans font-semibold text-xs tracking-[0.25em] text-white uppercase">Kapela</span>
                   <span className="font-caveat font-semibold text-3xl text-[#D4B078] mt-1 select-none">Dziewięćsił</span>
                 </div>
               </div>
               <p className="text-xs text-muted-brown max-w-[340px] leading-relaxed mt-2 font-sans">
-                 Regionalna szkoła i ognisko muzyki góralskiej pod Tatrami. Uczymy gry na skrzypcach, basach i akordeonie w duchu autentycznej tradycji spiskiej i podhalańskiej.
+                 Spiska kapela góralska z Czarnej Góry oraz Ognisko Muzyczne. Tradycyjna muzyka na żywo na koncerty i uroczystości oraz nauka gry na skrzypcach, basach i akordeonie.
               </p>
             </div>
 
@@ -765,17 +768,17 @@ export default function App() {
             <div className="md:col-span-3">
               <h4 className="font-serif font-bold text-white text-base mb-4 uppercase tracking-wider">Nawigacja</h4>
               <ul className="flex flex-col gap-2.5 text-sm font-medium">
-                <li><a href="#o-nas" className="hover:text-[#D4B078] transition-colors">O Nas</a></li>
-                <li><a href="#nauka" className="hover:text-[#D4B078] transition-colors">Nauka Gry i Śpiewu</a></li>
-                <li><a href="#galeria" className="hover:text-[#D4B078] transition-colors">Galeria Wspomnień</a></li>
-                <li><a href="#godziny" className="hover:text-[#D4B078] transition-colors">Godziny Lekcji</a></li>
-                <li><a href="#kontakt" className="hover:text-[#D4B078] transition-colors">Kontakt i Zapisy</a></li>
+                <li><a href="#o-nas" className="hover:text-[#D4B078] transition-colors">O Kapeli</a></li>
+                <li><a href="#nauka" className="hover:text-[#D4B078] transition-colors">Oferta i Nauka</a></li>
+                <li><a href="#galeria" className="hover:text-[#D4B078] transition-colors">Galeria Zdjęć</a></li>
+                <li><a href="#godziny" className="hover:text-[#D4B078] transition-colors">Godziny Prób</a></li>
+                <li><a href="#kontakt" className="hover:text-[#D4B078] transition-colors">Kontakt i Rezerwacja</a></li>
               </ul>
             </div>
 
             {/* Traditional Contact & Social signoffs */}
             <div className="md:col-span-4 flex flex-col gap-4">
-              <h4 className="font-serif font-bold text-white text-base mb-4 uppercase tracking-wider">Ognisko Dziewięćsił</h4>
+              <h4 className="font-serif font-bold text-white text-base mb-4 uppercase tracking-wider">Kapela Dziewięćsił</h4>
               <p className="text-sm text-cream-border leading-relaxed font-sans">
                 Czarna Góra 34-532, Polska<br />
                 Telefon: <a href="tel:889363480" className="hover:text-white transition-colors">889 363 480</a><br />
@@ -808,7 +811,7 @@ export default function App() {
 
           {/* Copyright line and editorial heart signature */}
           <div className="border-t border-wood-warm/15 pt-8 text-center text-xs flex flex-col sm:flex-row justify-between items-center gap-4 text-muted-brown">
-            <p>© {new Date().getFullYear()} Ognisko Muzyczne Kapela Dziewięćsił. Wszelkie prawa zastrzeżone.</p>
+            <p>© {new Date().getFullYear()} Kapela Dziewięćsił & Ognisko Muzyczne. Wszelkie prawa zastrzeżone.</p>
             <p className="font-serif italic text-white/40 flex items-center gap-1.5 select-none">
               Z miłości do tradycyjnej tatrzańskiej muzyki <span className="text-wood-warm">❦</span> Czarna Góra
             </p>
