@@ -221,11 +221,11 @@ export default function App() {
               </p>
               
               <p>
-                <strong>Kapela Dziewięćsił</strong> z Czarnej Góry to spiska kapela góralska, która z dumą prezentuje bogate dziedzictwo muzyczne Spisza, Podhala i całego regionu Tatr. Łączymy temperament, kunszt instrumentalny oraz autentyczny góralski śpiew, zapewniając niepowtarzalną oprawę muzyczną koncertów, uroczystości, wesel i wydarzeń kulturalnych.
+                <strong>Kapela Dziewięćsił</strong> z Czarnej Góry to kapela góralska, która z dumą prezentuje bogate dziedzictwo muzyczne Spisza, Podhala i całego regionu Tatr. Łączymy temperament, kunszt instrumentalny oraz autentyczny góralski śpiew, zapewniając niepowtarzalną oprawę muzyczną koncertów, uroczystości i wydarzeń kulturalnych.
               </p>
               
               <p>
-                Równolegle przy kapeli działa nasze <strong>Ognisko Muzyczne</strong> — przestrzeń tworzona z myślą o nauce gry na instrumentach regionalnych oraz śpiewu. Uczymy dzieci, młodzież i dorosłych autentycznych nut spiskich i podhalańskich, techniki sekundowania oraz wspólnego muzykowania w kapeli.
+                Równolegle przy kapeli działa nasze <strong>Ognisko Muzyczne</strong> — przestrzeń tworzona z myślą o nauce gry na instrumentach regionalnych oraz śpiewu. Uczymy dzieci, młodzież i dorosłych autentycznych melodii spiskich i podhalańskich, techniki sekundowania oraz wspólnego muzykowania w kapeli.
               </p>
 
               {/* Dark Wood Contact Card (Plaque) */}
@@ -279,7 +279,7 @@ export default function App() {
                   <div>
                     <h3 className="font-serif font-bold text-wood-dark text-lg sm:text-xl">Nauka Gry na Skrzypcach</h3>
                     <p className="text-sm text-wood-mid mt-1 font-sans leading-relaxed">
-                      Lekcje w Ognisku Muzycznym — nauka nut spiskich i podhalańskich ze słuchu, techniki smyczkowania, ozdobników oraz autentycznego sekundowania.
+                      Lekcje w Ognisku Muzycznym — nauka melodii spiskich ze słuchu, techniki smyczkowania, ozdobników oraz autentycznego sekundowania.
                     </p>
                   </div>
                 </div>
