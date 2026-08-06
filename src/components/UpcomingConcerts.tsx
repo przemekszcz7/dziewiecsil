@@ -18,40 +18,12 @@ interface CalendarEvent {
 }
 
 export default function UpcomingConcerts() {
-  const envApiKey = import.meta.env.VITE_GOOGLE_CALENDAR_API_KEY || '';
-  const envCalendarId = import.meta.env.VITE_GOOGLE_CALENDAR_ID || '';
+  const apiKey = import.meta.env.VITE_GOOGLE_CALENDAR_API_KEY || localStorage.getItem('dziewiecsil_gcal_api_key') || '';
+  const calendarId = import.meta.env.VITE_GOOGLE_CALENDAR_ID || localStorage.getItem('dziewiecsil_gcal_id') || '';
 
-  const [apiKey] = useState<string>(() => localStorage.getItem('dziewiecsil_gcal_api_key') || envApiKey);
-  const [calendarId] = useState<string>(() => localStorage.getItem('dziewiecsil_gcal_id') || envCalendarId);
-  
   const [events, setEvents] = useState<CalendarEvent[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-
-  // Demo fallback events if no API Key/Calendar ID is provided yet
-  const demoEvents: CalendarEvent[] = [
-    {
-      id: 'demo-1',
-      summary: 'Koncert Kolęd i Pastorałek z Kapelą Dziewięćsił',
-      location: 'Kościół Parafialny w Czarnej Górze',
-      description: 'Tradycyjny występ oparty na autentycznych melodich spiskich i podhalańskich kolędach.',
-      start: { dateTime: new Date(Date.now() + 86400000 * 3).toISOString() }
-    },
-    {
-      id: 'demo-2',
-      summary: 'Występ Regionalny na Dniu św. Szczepana',
-      location: 'Remiza OSP Czarna Góra',
-      description: 'Ogrywanie i wspólne muzykowanie wraz z uczniami Ogniska Muzycznego.',
-      start: { dateTime: new Date(Date.now() + 86400000 * 10).toISOString() }
-    },
-    {
-      id: 'demo-3',
-      summary: 'Suma Odpustowa i Pokaz Muzyki Góralskiej',
-      location: 'Jurgów – Kościół św. Sebastiana',
-      description: 'Oprawa muzyczna mszy świętej i plenerowy koncert po nabożeństwie.',
-      start: { dateTime: new Date(Date.now() + 86400000 * 20).toISOString() }
-    }
-  ];
 
   const fetchCalendarEvents = async () => {
     if (!apiKey.trim() || !calendarId.trim()) {
@@ -96,8 +68,6 @@ export default function UpcomingConcerts() {
     fetchCalendarEvents();
   }, [apiKey, calendarId]);
 
-  const isUsingConfiguredApi = Boolean(apiKey.trim() && calendarId.trim());
-
   return (
     <section id="koncerty" className="py-24 px-4 bg-linen border-b border-cream-border/60 relative overflow-hidden">
       <div className="max-w-[1080px] mx-auto">
@@ -141,7 +111,7 @@ export default function UpcomingConcerts() {
                 <RefreshCw className="w-3.5 h-3.5" /> Spróbuj ponownie
               </button>
             </div>
-          ) : isUsingConfiguredApi && events.length === 0 ? (
+          ) : events.length === 0 ? (
             <div className="py-16 text-center bg-paper border border-cream-border rounded-[2px]">
               <CalendarIcon className="w-12 h-12 text-wood-warm/50 mx-auto mb-3" />
               <h3 className="font-serif font-bold text-wood-dark text-2xl">Brak nadchodzących koncertów</h3>
@@ -150,9 +120,9 @@ export default function UpcomingConcerts() {
               </p>
             </div>
           ) : (
-            /* Render Events List (or demo events if no API config yet) */
+            /* Render Events List */
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {(isUsingConfiguredApi ? events : demoEvents).map((event) => {
+              {events.map((event) => {
                 const startStr = event.start.dateTime || event.start.date || '';
                 const dateObj = startStr ? new Date(startStr) : new Date();
 
