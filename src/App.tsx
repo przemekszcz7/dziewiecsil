@@ -3,7 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Phone, Mail, MapPin, Facebook, Instagram, ArrowRight, Music, Sparkles, X } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, ArrowRight, Music, Sparkles, X, Calendar, Users, BookOpen, Compass } from 'lucide-react';
+import UpcomingConcerts from './components/UpcomingConcerts';
 
 export default function App() {
   return (
@@ -34,6 +35,12 @@ export default function App() {
         <div className="flex flex-col gap-6 text-lg font-sans font-medium text-wood-mid mt-12">
           <a href="#o-nas" className="hover:text-wood-warm transition-colors py-2 border-b border-cream-border/40">
             O Kapeli
+          </a>
+          <a href="#historia" className="hover:text-wood-warm transition-colors py-2 border-b border-cream-border/40">
+            Historia Powstania
+          </a>
+          <a href="#koncerty" className="hover:text-wood-warm transition-colors py-2 border-b border-cream-border/40">
+            Koncerty
           </a>
           <a href="#nauka" className="hover:text-wood-warm transition-colors py-2 border-b border-cream-border/40">
             Występy i Nauka
@@ -77,6 +84,10 @@ export default function App() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6 text-sm font-sans font-semibold text-wood-mid">
             <a href="#o-nas" className="hover:text-wood-warm transition-colors">O Kapeli</a>
+            <span className="text-cream-border select-none">·</span>
+            <a href="#historia" className="hover:text-wood-warm transition-colors">Historia</a>
+            <span className="text-cream-border select-none">·</span>
+            <a href="#koncerty" className="hover:text-wood-warm transition-colors">Koncerty</a>
             <span className="text-cream-border select-none">·</span>
             <a href="#nauka" className="hover:text-wood-warm transition-colors">Oferta i Nauka</a>
             <span className="text-cream-border select-none">·</span>
@@ -279,7 +290,7 @@ export default function App() {
                   <div>
                     <h3 className="font-serif font-bold text-wood-dark text-lg sm:text-xl">Nauka Gry na Skrzypcach</h3>
                     <p className="text-sm text-wood-mid mt-1 font-sans leading-relaxed">
-                      Lekcje w Ognisku Muzycznym — nauka melodii spiskich ze słuchu, techniki smyczkowania, ozdobników oraz autentycznego sekundowania.
+                      Lekcje w Ognisku Muzycznym — nauka melodii regionalnych ze słuchu, techniki smyczkowania, ozdobników oraz autentycznego sekundowania.
                     </p>
                   </div>
                 </div>
@@ -321,8 +332,124 @@ export default function App() {
         </div>
       </section>
 
-      {/* Another Mountain separator */}
+      {/* Mountain Separator */}
       <div className="folk-band" />
+
+      {/* HISTORIA POWSTANIA SECTION */}
+      <section id="historia" className="py-24 px-4 bg-paper border-y border-cream-border/60 relative overflow-hidden">
+        <div className="max-w-[1080px] mx-auto">
+          
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <span className="font-sans font-semibold text-[11px] tracking-[0.25em] text-wood-warm uppercase">Tradycja, Pasja i Wspólnota</span>
+            <h2 className="font-serif font-bold text-wood-dark text-3xl sm:text-4xl md:text-5xl mt-2 leading-tight">
+              Historia Powstania Kapeli Muzycznej Dziewięćsił
+            </h2>
+            <div className="ornament">
+              <span className="orn-line"></span>
+              <span className="orn-mark">❦</span>
+              <span className="orn-line"></span>
+            </div>
+          </div>
+
+          {/* Key Facts / Highlights Bar */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
+            <div className="bg-linen p-5 border border-cream-border rounded-[2px] text-center shadow-2xs">
+              <Calendar className="w-6 h-6 text-wood-warm mx-auto mb-2" />
+              <div className="font-serif font-bold text-wood-dark text-xl sm:text-2xl">Lipiec 2023</div>
+              <div className="text-xs text-wood-mid font-sans mt-1">Pierwsza wizja i pomysł</div>
+            </div>
+            <div className="bg-linen p-5 border border-cream-border rounded-[2px] text-center shadow-2xs">
+              <Users className="w-6 h-6 text-wood-warm mx-auto mb-2" />
+              <div className="font-serif font-bold text-wood-dark text-xl sm:text-2xl">150+ Uczniów</div>
+              <div className="text-xs text-wood-mid font-sans mt-1">Od 4-latków po dorosłych</div>
+            </div>
+            <div className="bg-linen p-5 border border-cream-border rounded-[2px] text-center shadow-2xs">
+              <BookOpen className="w-6 h-6 text-wood-warm mx-auto mb-2" />
+              <div className="font-serif font-bold text-wood-dark text-xl sm:text-2xl">9 Nauczycieli</div>
+              <div className="text-xs text-wood-mid font-sans mt-1">Zajęcia Pn – Pt i w soboty</div>
+            </div>
+            <div className="bg-linen p-5 border border-cream-border rounded-[2px] text-center shadow-2xs">
+              <Compass className="w-6 h-6 text-wood-warm mx-auto mb-2" />
+              <div className="font-serif font-bold text-wood-dark text-xl sm:text-2xl">15+ Miejscowości</div>
+              <div className="text-xs text-wood-mid font-sans mt-1">Spisz, Podhale i Słowacja</div>
+            </div>
+          </div>
+
+          {/* Lead Introduction */}
+          <div className="p-8 sm:p-10 bg-linen border border-cream-border wood-border rounded-[2px] mb-12 shadow-xs">
+            <p className="font-serif text-wood-dark text-lg sm:text-xl leading-relaxed">
+              Kapela Muzyczna Dziewięćsił, założona przez Jacka Sarnę, to wyjątkowe miejsce na mapie muzycznej Spisza i Podhala. Jej powstanie było odpowiedzią na potrzebę stworzenia przestrzeni, w której muzyka regionalna może być pielęgnowana i rozwijana w atmosferze przyjaźni i wspólnoty, z dala od sztywnych ram tradycyjnej edukacji muzycznej.
+            </p>
+          </div>
+
+          {/* Timeline & Detailed Story Chapters */}
+          <div className="space-y-10 text-wood-mid font-sans text-base sm:text-lg leading-relaxed">
+            
+            {/* Chapter 1 */}
+            <div className="bg-linen/60 p-8 border border-cream-border/80 rounded-[2px] relative shadow-2xs">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="w-8 h-8 rounded-full bg-wood-warm/15 text-wood-warm font-serif font-bold text-sm flex items-center justify-center shrink-0">1</span>
+                <h3 className="font-serif font-bold text-wood-dark text-2xl sm:text-3xl">Jak to się zaczęło?</h3>
+              </div>
+              <div className="space-y-4 text-wood-dark/90">
+                <p>
+                  Jacek Sarna, od dawna marzący o skupieniu muzyków regionalnych, podjął odważną decyzję o realizacji swojej wizji. W lipcu 2023 roku, podczas rozmowy przy kawie, przekonał swojego znajomego muzyka, Grzegorza, do idei Kapeli Muzycznej. Celem było stworzenie miejsca, do którego ludzie chcieliby przychodzić z przyjemności, a nie z obowiązku, gdzie każdy mógłby spróbować swoich sił na instrumencie już od pierwszego spotkania.
+                </p>
+                <p>
+                  Początki były pełne wyzwań. Znalezienie odpowiedniego miejsca okazało się problemem, ale z pomocą przyszła jednostka OSP Czarna Góra, udostępniając remizę. Jacek, świadomy kosztów instrumentów i niepewności początkujących uczniów, postanowił wypożyczać instrumenty, co znacznie ułatwiło start wielu osobom.
+                </p>
+                <p>
+                  Pierwsze spotkanie organizacyjne w sierpniu przerosło oczekiwania, a frekwencja zaskoczyła twórców. We wrześniu rozpoczęły się regularne zajęcia. Szybko okazało się, że akustyka remizy nie sprzyja nauce gry na skrzypcach, dlatego Jacek zdecydował się na przerobienie rodzinnego garażu na salkę do nauki.
+                </p>
+              </div>
+            </div>
+
+            {/* Chapter 2 */}
+            <div className="bg-linen/60 p-8 border border-cream-border/80 rounded-[2px] relative shadow-2xs">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="w-8 h-8 rounded-full bg-wood-warm/15 text-wood-warm font-serif font-bold text-sm flex items-center justify-center shrink-0">2</span>
+                <h3 className="font-serif font-bold text-wood-dark text-2xl sm:text-3xl">Niezwykły Rozwój i Pierwsze Sukcesy</h3>
+              </div>
+              <div className="space-y-4 text-wood-dark/90">
+                <p>
+                  Liczba uczniów rosła w błyskawicznym tempie. Już po dwóch miesiącach nauki, widząc zapał i postępy podopiecznych, Kapela Muzyczna Dziewięćsił podjęła śmiałą decyzję o pierwszym publicznym występie. Grudzień był miesiącem intensywnych prób, a efekty przeszły najśmielsze oczekiwania. Uczniowie, uczący się zaledwie dwa i pół miesiąca, zachwycili publiczność swoim występem na Pasterce. Od tego momentu lawinowo posypały się zaproszenia na kolejne występy, m.in. na Sumę w Boże Narodzenie, w Dzień św. Szczepana, w kościele w Rzepiskach, w pochodzie Trzech Króli, a także na koncert kolęd w Jurgowie, gdzie mieli okazję zagrać z dziecięco-młodzieżową muzyką spiską.
+                </p>
+                <p>
+                  Kapela Muzyczna Dziewięćsił nie tylko grała na scenach, ale też pielęgnowała lokalne tradycje, takie jak kolędowanie po miejscowości i ogrywanie Mojek , co spotkało się z ciepłym przyjęciem mieszkańców.
+                </p>
+              </div>
+            </div>
+
+            {/* Chapter 3 */}
+            <div className="bg-linen/60 p-8 border border-cream-border/80 rounded-[2px] relative shadow-2xs">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="w-8 h-8 rounded-full bg-wood-warm/15 text-wood-warm font-serif font-bold text-sm flex items-center justify-center shrink-0">3</span>
+                <h3 className="font-serif font-bold text-wood-dark text-2xl sm:text-3xl">Połączenie Kultur i Edukacja Bez Granic</h3>
+              </div>
+              <div className="space-y-4 text-wood-dark/90">
+                <p>
+                  Jedną z najbardziej niezwykłych cech Kapeli Muzycznej Dziewięćsił jest jej wielokulturowość. Mimo położenia na Spiszu, Kapela nie ogranicza się tylko do melodii spiskich. Gra również utwory podhalańskie, słowackie i orawskie, świadomie zacierając podziały i podkreślając, że wszyscy są muzykami. Jacek, jako osoba z korzeniami spiskimi i podhalańskimi, sam doświadczył podziałów, dlatego w Kapeli panuje atmosfera pełnej akceptacji, gdzie każdy ma prawo być sobą i pielęgnować swoją kulturę.
+                </p>
+                <p>
+                  Obecnie w Kapeli uczy się ponad 150 osób w różnym wieku, od 4-letnich maluchów po dorosłych. Uczniowie pochodzą nie tylko z Czarnej Góry, ale także z Rzepisk, Jurgowa, Bukowiny Tatrzańskiej, Białki Tatrzańskiej, Trybsza, Łapsz, a nawet z Zakopanego, Poronina, Murzasichla, Waksmunda, Boru, Dursztyna, Piekielnika i słowackiego Zdiaru.
+                </p>
+                <p>
+                  W Kapeli naucza się gry na skrzypcach, basach, kontrabasie i akordeonie, a także śpiewu. W planach jest rozszerzenie oferty o altówkę i cymbały. Zajęcia prowadzi 9 nauczycieli od poniedziałku do piątku, a w soboty Jacek prowadzi zajęcia grupowe w remizie, dzieląc się swoją pasją i doświadczeniem.
+                </p>
+                <p className="font-serif italic text-wood-dark font-semibold text-lg sm:text-xl pt-4 border-t border-cream-border/80 text-wood-warm">
+                  Historia Kapeli Muzycznej Dziewięćsił to dowód na to, że z prawdziwej pasji i zaangażowania można stworzyć coś niezwykłego, co łączy ludzi i pielęgnuje cenne tradycje, jednocześnie otwierając się na nowe.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* UPCOMING CONCERTS SECTION (GOOGLE CALENDAR API) */}
+      <UpcomingConcerts />
 
       {/* 6. GALLERY SECTION */}
       <section id="galeria" className="py-24 px-4 bg-paper">
@@ -760,7 +887,7 @@ export default function App() {
                 </div>
               </div>
               <p className="text-xs text-muted-brown max-w-[340px] leading-relaxed mt-2 font-sans">
-                 Spiska kapela góralska z Czarnej Góry oraz Ognisko Muzyczne. Tradycyjna muzyka na żywo na koncerty i uroczystości oraz nauka gry na skrzypcach, basach i akordeonie.
+                 Kapela góralska z Czarnej Góry oraz Ognisko Muzyczne. Tradycyjna muzyka na żywo na koncerty i uroczystości oraz nauka gry na skrzypcach, basach i akordeonie.
               </p>
             </div>
 
