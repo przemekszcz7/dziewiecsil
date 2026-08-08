@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar as CalendarIcon, MapPin, Clock, Music, RefreshCw, ExternalLink, AlertCircle } from 'lucide-react';
+import { Calendar as CalendarIcon, MapPin, Clock, Music, RefreshCw, AlertCircle } from 'lucide-react';
 
 interface CalendarEvent {
   id: string;
@@ -86,7 +86,7 @@ export default function UpcomingConcerts() {
             <span className="orn-line"></span>
           </div>
           <p className="text-sm sm:text-base text-wood-mid max-w-2xl mx-auto font-sans leading-relaxed">
-            Sprawdź, gdzie i kiedy możesz usłyszeć Kapelę Dziewięćsił na żywo. Wydarzenia są pobierane bezpośrednio z naszego oficjalnego Kalendarza Google.
+            Sprawdź, gdzie i kiedy możesz usłyszeć Kapelę Dziewięćsił na żywo.
           </p>
         </div>
 
@@ -179,20 +179,6 @@ export default function UpcomingConcerts() {
                         </p>
                       )}
                     </div>
-
-                    {/* Footer / Calendar Link */}
-                    {event.htmlLink && (
-                      <div className="pt-4 mt-4 border-t border-cream-border/60 flex justify-end">
-                        <a
-                          href={event.htmlLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-[11px] font-sans font-semibold text-wood-warm hover:text-wood-dark transition-colors"
-                        >
-                          Zobacz w Kalendarzu Google <ExternalLink className="w-3 h-3" />
-                        </a>
-                      </div>
-                    )}
                   </div>
                 );
               })}
