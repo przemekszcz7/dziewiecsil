@@ -10,9 +10,9 @@
 
 backend:
   name: git-gateway
-  repo: przemekszcz7/dziewiecsil   # np. jankowalski/kapela-dziewiecsil
+  repo: TWOJA-NAZWA-UZYTKOWNIKA/NAZWA-REPOZYTORIUM   # np. jankowalski/kapela-dziewiecsil
   branch: main                                        # gałąź, na którą commituje CMS
-  identity_url: https://auth.decapbridge.com/sites/3561764f-75d2-4f1d-9d9f-585d0af81bc2  # z panelu DecapBridge
+  identity_url: https://auth.decapbridge.com/sites/TWOJE-SITE-ID   # z panelu DecapBridge
   gateway_url: https://gateway.decapbridge.com                     # z panelu DecapBridge
 
 # Lepsze, czytelne komunikaty commitów w historii repo (opcjonalne, ale polecane)
@@ -29,8 +29,11 @@ publish_mode: simple
 
 # Domyślne miejsce, gdzie DecapCMS zapisuje NOWO WGRYWANE zdjęcia.
 # Musi być katalog wewnątrz "public", żeby Vite skopiował go 1:1 do builda.
+# UWAGA: public_folder jest bezwzględnym adresem URL (z domeną i subpath),
+# bo strona jest hostowana pod .../dziewiecsil/ — dzięki temu podgląd
+# zdjęć w panelu CMS pokazuje się poprawnie, a nie jako "połamana" ikonka.
 media_folder: "public/images/uploads"
-public_folder: "/images/uploads"
+public_folder: "https://przemekszcz7.github.io/dziewiecsil/images/uploads"
 
 locale: "pl"
 
