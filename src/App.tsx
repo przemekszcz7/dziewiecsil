@@ -914,7 +914,7 @@ export default function App() {
               
               <div className="flex gap-3 mt-3">
                 <a 
-                  href="https://www.facebook.com/people/Kapela-Dziewięćsił-Ognisko-Muzyczne/61556012623348/" 
+                  href="https://www.facebook.com/kapeladziewiecsil/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="p-2.5 bg-[#2E1E0F] hover:bg-wood-warm text-white transition-all duration-300 rounded-full border border-wood-warm/30 flex items-center justify-center"
@@ -923,7 +923,7 @@ export default function App() {
                   <Facebook className="w-4 h-4" />
                 </a>
                 <a 
-                  href="https://www.instagram.com/" 
+                  href="https://www.instagram.com/OGNISKOMUZYCZNE_DZIEWIECSIL?fbclid=IwcGRvZgFleHRuA2FlbQIxMABicmlkETFkdEVRRnlSQk55Q280MXpYc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHjKf-PC2FQoc51mD4ywJYsUvp_J_Pf0skk4oMWnssfk0Ibpq3FdccQ1G7bUR_aem_5WNyhP4m9woF8JIktC9tDw" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="p-2.5 bg-[#2E1E0F] hover:bg-wood-warm text-white transition-all duration-300 rounded-full border border-wood-warm/30 flex items-center justify-center"
