@@ -5,6 +5,14 @@
 
 import { Phone, Mail, MapPin, Facebook, Instagram, ArrowRight, Music, Sparkles, X, Calendar, Users, BookOpen, Compass } from 'lucide-react';
 import UpcomingConcerts from './components/UpcomingConcerts';
+import siteSettings from './content/settings.json';
+import galleryContent from './content/gallery.json';
+
+// Gallery images edited via DecapCMS (src/content/gallery.json).
+// First 6 are always visible, the rest appear after "Rozwiń galerię".
+const galleryItems = galleryContent.items || [];
+const visibleGalleryItems = galleryItems.slice(0, 6);
+const extraGalleryItems = galleryItems.slice(6);
 
 export default function App() {
   return (
@@ -71,7 +79,7 @@ export default function App() {
           {/* Logo & Stacked Wordmark */}
           <a href="#" className="flex items-center gap-3 group">
             <img 
-              src="/images/fav.jpg" 
+              src={siteSettings.logoImage} 
               alt="Logo Kapela Dziewięćsił" 
               className="w-10 h-10 object-cover rounded-full border border-wood-warm group-hover:scale-105 transition-transform duration-300" 
             />
@@ -126,7 +134,7 @@ export default function App() {
       {/* 3. HERO (min-height: 100vh) */}
       <section 
         className="relative min-h-[92vh] flex flex-col items-center justify-center text-center px-4 py-24 bg-cover bg-center" 
-        style={{ backgroundImage: `url('/images/hero.jpg')` }}
+        style={{ backgroundImage: `url('${siteSettings.heroImage}')` }}
       >
         {/* Warm brown gradient overlay (carved wood tones) */}
         <div className="absolute inset-0 bg-gradient-to-b from-wood-dark/85 via-wood-dark/80 to-wood-dark/95"></div>
@@ -477,180 +485,62 @@ export default function App() {
           */}
           <input type="checkbox" id="gallery-toggle" className="hidden peer/gallery" />
 
-          {/* Grid 1: Always Visible Images (1 to 6) */}
+          {/* Grid 1: Always Visible Images (first 6 items from src/content/gallery.json) */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            {/* Photo 1 */}
-            <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
-              <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
-                <img 
-                  src="/images/1.jpg" 
-                  alt="Młodzi muzycy" 
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
-                />
+            {visibleGalleryItems.map((photo, index) => (
+              <div key={`gallery-visible-${index}`} className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
+                <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
+                  <img
+                    src={photo.image}
+                    alt={photo.alt || 'Zdjęcie z galerii Kapeli Dziewięćsił'}
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+                  />
+                </div>
               </div>
-            </div>
-
-            {/* Photo 2 */}
-            <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
-              <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
-                <img 
-                  src="/images/2.jpg" 
-                  alt="Skrzypaczki w strojach ludowych" 
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
-                />
-              </div>
-            </div>
-
-            {/* Photo 3 */}
-            <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
-              <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
-                <img 
-                  src="/images/3.jpg" 
-                  alt="Zajęcia z mistrzami" 
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
-                />
-              </div>
-            </div>
-
-            {/* Photo 4 */}
-            <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
-              <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
-                <img 
-                  src="/images/4.jpg" 
-                  alt="Młody skrzypek" 
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
-                />
-              </div>
-            </div>
-
-            {/* Photo 5 */}
-            <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
-              <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
-                <img 
-                  src="/images/5.jpg" 
-                  alt="Wspólne muzykowanie" 
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
-                />
-              </div>
-            </div>
-
-            {/* Photo 6 */}
-            <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
-              <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
-                <img 
-                  src="/images/6.jpg" 
-                  alt="Koncerty regionalne" 
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
-                />
-              </div>
-            </div>
-
+            ))}
           </div>
 
-          {/* Grid 2: Expandable Images (7 to 12) */}
-          <div className="max-h-0 overflow-hidden opacity-0 scale-y-95 transition-all duration-1000 ease-in-out peer-checked/gallery:max-h-[5000px] peer-checked/gallery:opacity-100 peer-checked/gallery:scale-y-100 peer-checked/gallery:mt-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Grid 2: Expandable Images (all remaining items from src/content/gallery.json) */}
+          {extraGalleryItems.length > 0 && (
+            <div className="max-h-0 overflow-hidden opacity-0 scale-y-95 transition-all duration-1000 ease-in-out peer-checked/gallery:max-h-[5000px] peer-checked/gallery:opacity-100 peer-checked/gallery:scale-y-100 peer-checked/gallery:mt-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {extraGalleryItems.map((photo, index) => (
+                  <div key={`gallery-extra-${index}`} className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
+                    <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
+                      <img
+                        src={photo.image}
+                        alt={photo.alt || 'Zdjęcie z galerii Kapeli Dziewięćsił'}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Expand and Collapse Buttons (only shown when there is something to expand) */}
+          {extraGalleryItems.length > 0 && (
+            <div className="flex justify-center mt-12">
+              {/* Expanded button label */}
+              <label 
+                htmlFor="gallery-toggle" 
+                className="peer-checked/gallery:hidden cursor-pointer select-none px-8 py-4 border-4 border-double border-wood-warm text-wood-warm hover:bg-wood-warm hover:text-white font-sans uppercase text-xs font-semibold tracking-widest transition-all duration-300 rounded-[2px] inline-flex items-center gap-2.5 shadow-xs"
+              >
+                Rozwiń całą galerię wspomnień ({galleryItems.length} zdjęć) <span className="text-sm">❦</span>
+              </label>
               
-              {/* Photo 7 */}
-              <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
-                <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
-                  <img 
-                    src="/images/7.jpg" 
-                    alt="Próba muzyczna kapeli" 
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
-                  />
-                </div>
-              </div>
-
-              {/* Photo 8 */}
-              <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
-                <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
-                  <img 
-                    src="/images/8.jpg" 
-                    alt="Koncert i basowanie" 
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
-                  />
-                </div>
-              </div>
-
-              {/* Photo 9 */}
-              <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
-                <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
-                  <img 
-                    src="/images/9.jpg" 
-                    alt="Występy na Spiszu" 
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
-                  />
-                </div>
-              </div>
-
-              {/* Photo 10 */}
-              <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
-                <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
-                  <img 
-                    src="/images/10.jpg" 
-                    alt="Śpiew z piersi podhale" 
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
-                  />
-                </div>
-              </div>
-
-              {/* Photo 11 */}
-              <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
-                <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
-                  <img 
-                    src="/images/11.jpg" 
-                    alt="Uczniowie akordeonu" 
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
-                  />
-                </div>
-              </div>
-
-              {/* Photo 12 */}
-              <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
-                <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
-                  <img 
-                    src="/images/12.jpg" 
-                    alt="Muzyczna gromada Dziewięćsił" 
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
-                  />
-                </div>
-              </div>
-
+              {/* Collapse button label */}
+              <label 
+                htmlFor="gallery-toggle" 
+                className="hidden peer-checked/gallery:inline-flex cursor-pointer select-none px-8 py-4 border-4 border-double border-wood-warm text-wood-warm hover:bg-wood-warm hover:text-white font-sans uppercase text-xs font-semibold tracking-widest transition-all duration-300 rounded-[2px] items-center gap-2.5 shadow-xs"
+              >
+                Zwiń galerię <span className="text-sm">❦</span>
+              </label>
             </div>
-          </div>
-
-          {/* Expand and Collapse Buttons */}
-          <div className="flex justify-center mt-12">
-            {/* Expanded button label */}
-            <label 
-              htmlFor="gallery-toggle" 
-              className="peer-checked/gallery:hidden cursor-pointer select-none px-8 py-4 border-4 border-double border-wood-warm text-wood-warm hover:bg-wood-warm hover:text-white font-sans uppercase text-xs font-semibold tracking-widest transition-all duration-300 rounded-[2px] inline-flex items-center gap-2.5 shadow-xs"
-            >
-              Rozwiń całą galerię wspomnień (12 zdjęć) <span className="text-sm">❦</span>
-            </label>
-            
-            {/* Collapse button label */}
-            <label 
-              htmlFor="gallery-toggle" 
-              className="hidden peer-checked/gallery:inline-flex cursor-pointer select-none px-8 py-4 border-4 border-double border-wood-warm text-wood-warm hover:bg-wood-warm hover:text-white font-sans uppercase text-xs font-semibold tracking-widest transition-all duration-300 rounded-[2px] items-center gap-2.5 shadow-xs"
-            >
-              Zwiń galerię <span className="text-sm">❦</span>
-            </label>
-          </div>
+          )}
 
         </div>
       </section>
@@ -877,7 +767,7 @@ export default function App() {
             <div className="md:col-span-5 flex flex-col gap-4">
               <div className="flex items-center gap-3">
                 <img 
-                  src="/images/fav.jpg" 
+                  src={siteSettings.logoImage} 
                   alt="Logo Kapela Dziewięćsił" 
                   className="w-12 h-12 object-cover rounded-full border-2 border-wood-warm" 
                 />
