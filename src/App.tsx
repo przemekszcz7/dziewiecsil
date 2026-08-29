@@ -8,6 +8,16 @@ import UpcomingConcerts from './components/UpcomingConcerts';
 import siteSettings from './content/settings.json';
 import galleryContent from './content/gallery.json';
 
+// Strona jest hostowana pod subpath (np. /dziewiecsil/), więc ścieżek do
+// obrazków NIE wolno zaczynać od "/" — trzeba je doklejać do BASE_URL,
+// który Vite ustawia automatycznie na podstawie "base" w vite.config.ts.
+const withBase = (path: string) => {
+  if (!path) return path;
+  const base = import.meta.env.BASE_URL; // np. "./" albo "/dziewiecsil/"
+  const cleanPath = path.replace(/^\/+/, ''); // usuń ewentualny wiodący "/"
+  return `${base}${cleanPath}`;
+};
+
 // Gallery images edited via DecapCMS (src/content/gallery.json).
 // First 6 are always visible, the rest appear after "Rozwiń galerię".
 const galleryItems = galleryContent.items || [];
@@ -79,7 +89,7 @@ export default function App() {
           {/* Logo & Stacked Wordmark */}
           <a href="#" className="flex items-center gap-3 group">
             <img 
-              src={siteSettings.logoImage} 
+              src={withBase(siteSettings.logoImage)} 
               alt="Logo Kapela Dziewięćsił" 
               className="w-10 h-10 object-cover rounded-full border border-wood-warm group-hover:scale-105 transition-transform duration-300" 
             />
@@ -134,7 +144,7 @@ export default function App() {
       {/* 3. HERO (min-height: 100vh) */}
       <section 
         className="relative min-h-[92vh] flex flex-col items-center justify-center text-center px-4 py-24 bg-cover bg-center" 
-        style={{ backgroundImage: `url('${siteSettings.heroImage}')` }}
+        style={{ backgroundImage: `url('${withBase(siteSettings.heroImage)}')` }}
       >
         {/* Warm brown gradient overlay (carved wood tones) */}
         <div className="absolute inset-0 bg-gradient-to-b from-wood-dark/85 via-wood-dark/80 to-wood-dark/95"></div>
@@ -491,7 +501,7 @@ export default function App() {
               <div key={`gallery-visible-${index}`} className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
                 <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
                   <img
-                    src={photo.image}
+                    src={withBase(photo.image)}
                     alt={photo.alt || 'Zdjęcie z galerii Kapeli Dziewięćsił'}
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
@@ -509,7 +519,7 @@ export default function App() {
                   <div key={`gallery-extra-${index}`} className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
                     <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
                       <img
-                        src={photo.image}
+                        src={withBase(photo.image)}
                         alt={photo.alt || 'Zdjęcie z galerii Kapeli Dziewięćsił'}
                         referrerPolicy="no-referrer"
                         className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
@@ -767,7 +777,7 @@ export default function App() {
             <div className="md:col-span-5 flex flex-col gap-4">
               <div className="flex items-center gap-3">
                 <img 
-                  src={siteSettings.logoImage} 
+                  src={withBase(siteSettings.logoImage)} 
                   alt="Logo Kapela Dziewięćsił" 
                   className="w-12 h-12 object-cover rounded-full border-2 border-wood-warm" 
                 />
