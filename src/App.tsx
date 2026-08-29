@@ -8,11 +8,12 @@ import UpcomingConcerts from './components/UpcomingConcerts';
 import siteSettings from './content/settings.json';
 import galleryContent from './content/gallery.json';
 
-// Strona jest hostowana pod subpath (np. /dziewiecsil/), więc ścieżek do
-// obrazków NIE wolno zaczynać od "/" — trzeba je doklejać do BASE_URL,
-// który Vite ustawia automatycznie na podstawie "base" w vite.config.ts.
+// Ścieżki w content/*.json są teraz pełnymi adresami URL (żeby zgadzały się
+// z podglądem w panelu DecapCMS), więc wystarczy przepuścić je bez zmian.
+// Ta funkcja zostaje na wypadek, gdybyś kiedyś wrócił do ścieżek względnych.
 const withBase = (path: string) => {
   if (!path) return path;
+  if (/^https?:\/\//i.test(path)) return path; // pełny URL — nic nie zmieniaj
   const base = import.meta.env.BASE_URL; // np. "./" albo "/dziewiecsil/"
   const cleanPath = path.replace(/^\/+/, ''); // usuń ewentualny wiodący "/"
   return `${base}${cleanPath}`;
