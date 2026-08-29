@@ -1,0 +1,16 @@
+{
+  "items": [
+    { "image": "/images/1.jpg", "alt": "Młodzi muzycy" },
+    { "image": "/images/2.jpg", "alt": "Skrzypaczki w strojach ludowych" },
+    { "image": "/images/3.jpg", "alt": "Zajęcia z mistrzami" },
+    { "image": "/images/4.jpg", "alt": "Młody skrzypek" },
+    { "image": "/images/5.jpg", "alt": "Wspólne muzykowanie" },
+    { "image": "/images/6.jpg", "alt": "Koncerty regionalne" },
+    { "image": "/images/7.jpg", "alt": "Próba muzyczna kapeli" },
+    { "image": "/images/8.jpg", "alt": "Koncert i basowanie" },
+    { "image": "/images/9.jpg", "alt": "Występy na Spiszu" },
+    { "image": "/images/10.jpg", "alt": "Śpiew z piersi podhale" },
+    { "image": "/images/11.jpg", "alt": "Uczniowie akordeonu" },
+    { "image": "/images/12.jpg", "alt": "Muzyczna gromada Dziewięćsił" }
+  ]
+}
