@@ -71,7 +71,7 @@ export default function App() {
           {/* Logo & Stacked Wordmark */}
           <a href="#" className="flex items-center gap-3 group">
             <img 
-              src="https://i.ibb.co/7x7yp5q2/689017777-827609407086771-8112193674280947656-n.jpg" 
+              src="/images/fav.jpg" 
               alt="Logo Kapela Dziewięćsił" 
               className="w-10 h-10 object-cover rounded-full border border-wood-warm group-hover:scale-105 transition-transform duration-300" 
             />
@@ -126,7 +126,7 @@ export default function App() {
       {/* 3. HERO (min-height: 100vh) */}
       <section 
         className="relative min-h-[92vh] flex flex-col items-center justify-center text-center px-4 py-24 bg-cover bg-center" 
-        style={{ backgroundImage: `url('https://i.ibb.co/JjkXC3D1/656300150-786721457842233-242503682541110822-n.jpg')` }}
+        style={{ backgroundImage: `url('/images/hero.jpg')` }}
       >
         {/* Warm brown gradient overlay (carved wood tones) */}
         <div className="absolute inset-0 bg-gradient-to-b from-wood-dark/85 via-wood-dark/80 to-wood-dark/95"></div>
@@ -484,7 +484,7 @@ export default function App() {
             <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
               <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
                 <img 
-                  src="https://i.ibb.co/bg09kFSV/731037663-864836570030721-5852817105280616359-n.jpg" 
+                  src="/images/1.jpg" 
                   alt="Młodzi muzycy" 
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
@@ -496,7 +496,7 @@ export default function App() {
             <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
               <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
                 <img 
-                  src="https://i.ibb.co/LDfXBhwX/730104250-864836510030727-7527599490019844186-n.jpg" 
+                  src="/images/2.jpg" 
                   alt="Skrzypaczki w strojach ludowych" 
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
@@ -508,7 +508,7 @@ export default function App() {
             <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
               <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
                 <img 
-                  src="https://i.ibb.co/xKMxsq3P/729089124-864836396697405-3035361853268572947-n.jpg" 
+                  src="/images/3.jpg" 
                   alt="Zajęcia z mistrzami" 
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
@@ -520,7 +520,7 @@ export default function App() {
             <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
               <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
                 <img 
-                  src="https://i.ibb.co/b5sYqMjV/730332054-864836350030743-984458030303002394-n.jpg" 
+                  src="/images/4.jpg" 
                   alt="Młody skrzypek" 
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
@@ -532,7 +532,7 @@ export default function App() {
             <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
               <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
                 <img 
-                  src="https://i.ibb.co/C3X9h7VT/729769070-865292729985105-7318775599606778125-n.jpg" 
+                  src="/images/5.jpg" 
                   alt="Wspólne muzykowanie" 
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
@@ -544,7 +544,7 @@ export default function App() {
             <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
               <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
                 <img 
-                  src="https://i.ibb.co/B5wgZYL1/730713387-865292636651781-4078662457652631193-n.jpg" 
+                  src="/images/6.jpg" 
                   alt="Koncerty regionalne" 
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
@@ -562,7 +562,7 @@ export default function App() {
               <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
                 <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
                   <img 
-                    src="https://i.ibb.co/JR39PzgP/730332066-865292566651788-6502464684219307053-n.jpg" 
+                    src="/images/7.jpg" 
                     alt="Próba muzyczna kapeli" 
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
@@ -574,7 +574,7 @@ export default function App() {
               <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
                 <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
                   <img 
-                    src="https://i.ibb.co/spj0CFLy/738809564-871971192650592-6203692687169341183-n.jpg" 
+                    src="/images/8.jpg" 
                     alt="Koncert i basowanie" 
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
@@ -586,7 +586,7 @@ export default function App() {
               <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
                 <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
                   <img 
-                    src="https://i.ibb.co/GvqvY3VT/738303956-871970969317281-3030283913625569762-n.jpg" 
+                    src="/images/9.jpg" 
                     alt="Występy na Spiszu" 
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
@@ -598,7 +598,7 @@ export default function App() {
               <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
                 <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
                   <img 
-                    src="https://i.ibb.co/Pv0vHC1G/740601677-877413725439672-1414533569321402121-n.jpg" 
+                    src="/images/10.jpg" 
                     alt="Śpiew z piersi podhale" 
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
@@ -610,7 +610,7 @@ export default function App() {
               <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
                 <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
                   <img 
-                    src="https://i.ibb.co/21v9w9gH/742362708-877413675439677-4777994752650649269-n.jpg" 
+                    src="/images/11.jpg" 
                     alt="Uczniowie akordeonu" 
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
@@ -622,7 +622,7 @@ export default function App() {
               <div className="bg-linen p-3.5 wood-border shadow-xs hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
                 <div className="overflow-hidden aspect-[4/3] bg-wood-dark">
                   <img 
-                    src="https://i.ibb.co/KcV4dRL3/742145178-877413958772982-510836111586596492-n.jpg" 
+                    src="/images/12.jpg" 
                     alt="Muzyczna gromada Dziewięćsił" 
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
@@ -877,7 +877,7 @@ export default function App() {
             <div className="md:col-span-5 flex flex-col gap-4">
               <div className="flex items-center gap-3">
                 <img 
-                  src="https://i.ibb.co/7x7yp5q2/689017777-827609407086771-8112193674280947656-n.jpg" 
+                  src="/images/fav.jpg" 
                   alt="Logo Kapela Dziewięćsił" 
                   className="w-12 h-12 object-cover rounded-full border-2 border-wood-warm" 
                 />
