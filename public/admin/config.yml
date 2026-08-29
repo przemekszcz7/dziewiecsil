@@ -12,7 +12,7 @@ backend:
   name: git-gateway
   repo: przemekszcz7/dziewiecsil   # np. jankowalski/kapela-dziewiecsil
   branch: main                                        # gałąź, na którą commituje CMS
-  identity_url: https://auth.decapbridge.com/sites/TWOJE-SITE-ID   # z panelu DecapBridge
+  identity_url: https://auth.decapbridge.com/sites/3561764f-75d2-4f1d-9d9f-585d0af81bc2  # z panelu DecapBridge
   gateway_url: https://gateway.decapbridge.com                     # z panelu DecapBridge
 
 # Lepsze, czytelne komunikaty commitów w historii repo (opcjonalne, ale polecane)
