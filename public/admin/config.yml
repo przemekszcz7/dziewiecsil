@@ -10,7 +10,7 @@
 
 backend:
   name: git-gateway
-  repo: TWOJA-NAZWA-UZYTKOWNIKA/NAZWA-REPOZYTORIUM   # np. jankowalski/kapela-dziewiecsil
+  repo: przemekszcz7/dziewiecsil  # np. jankowalski/kapela-dziewiecsil
   branch: main                                        # gałąź, na którą commituje CMS
   identity_url: https://auth.decapbridge.com/sites/TWOJE-SITE-ID   # z panelu DecapBridge
   gateway_url: https://gateway.decapbridge.com                     # z panelu DecapBridge
