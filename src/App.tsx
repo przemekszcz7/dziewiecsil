@@ -273,7 +273,7 @@ export default function App() {
                     Zadzwoń: 889 363 480
                   </a>
                   <a 
-                    href="mailto:ogniskodziewiecsil@gmail.com" 
+                    href="mailto:kontakt@kapeladziewiecsil.pl" 
                     className="px-6 py-3.5 border border-wood-mid text-wood-mid hover:bg-wood-dark hover:text-white transition-all duration-300 font-sans font-semibold uppercase text-[10px] tracking-widest text-center rounded-[2px]"
                   >
                     Napisz do nas e-mail
@@ -697,10 +697,10 @@ export default function App() {
                     <div>
                       <span className="block font-sans text-[10px] text-[#8C5E32] uppercase tracking-widest font-semibold">Napisz e-mail</span>
                       <a 
-                        href="mailto:ogniskodziewiecsil@gmail.com" 
+                        href="mailto:kontakt@kapeladziewiecsil.pl" 
                         className="block font-sans font-bold text-sm sm:text-base text-wood-dark hover:text-wood-warm transition-colors mt-0.5 break-all"
                       >
-                        ogniskodziewiecsil@gmail.com
+                        kontakt@kapeladziewiecsil.pl
                       </a>
                     </div>
                   </div>
@@ -727,7 +727,7 @@ export default function App() {
                 <span className="block font-sans text-[10px] text-[#8C5E32] uppercase tracking-widest font-semibold mb-4">Śledź nasze konto społecznościowe</span>
                 <div className="flex gap-4 justify-center">
                   <a 
-                    href="https://www.facebook.com/people/Kapela-Dziewięćsił-Ognisko-Muzyczne/61556012623348/" 
+                    href="https://www.facebook.com/kapeladziewiecsil" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="p-3 bg-linen text-wood-dark hover:bg-wood-warm hover:text-white transition-all duration-300 rounded-full border border-cream-border flex items-center justify-center"
@@ -736,7 +736,7 @@ export default function App() {
                     <Facebook className="w-5 h-5" />
                   </a>
                   <a 
-                    href="https://www.instagram.com/" 
+                    href="https://www.instagram.com/ogniskomuzyczne_dziewiecsil/" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="p-3 bg-linen text-wood-dark hover:bg-wood-warm hover:text-white transition-all duration-300 rounded-full border border-cream-border flex items-center justify-center"
@@ -810,12 +810,12 @@ export default function App() {
               <p className="text-sm text-cream-border leading-relaxed font-sans">
                 Czarna Góra 34-532, Polska<br />
                 Telefon: <a href="tel:889363480" className="hover:text-white transition-colors">889 363 480</a><br />
-                E-mail: <a href="mailto:ogniskodziewiecsil@gmail.com" className="hover:text-white transition-colors">ogniskodziewiecsil@gmail.com</a>
+                E-mail: <a href="mailto:kontakt@kapeladziewiecsil.pl" className="hover:text-white transition-colors">kontakt@kapeladziewiecsil.pl</a>
               </p>
               
               <div className="flex gap-3 mt-3">
                 <a 
-                  href="https://www.facebook.com/kapeladziewiecsil/" 
+                  href="https://www.facebook.com/kapeladziewiecsil" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="p-2.5 bg-[#2E1E0F] hover:bg-wood-warm text-white transition-all duration-300 rounded-full border border-wood-warm/30 flex items-center justify-center"
@@ -824,7 +824,7 @@ export default function App() {
                   <Facebook className="w-4 h-4" />
                 </a>
                 <a 
-                  href="https://www.instagram.com/OGNISKOMUZYCZNE_DZIEWIECSIL?fbclid=IwcGRvZgFleHRuA2FlbQIxMABicmlkETFkdEVRRnlSQk55Q280MXpYc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHjKf-PC2FQoc51mD4ywJYsUvp_J_Pf0skk4oMWnssfk0Ibpq3FdccQ1G7bUR_aem_5WNyhP4m9woF8JIktC9tDw" 
+                  href="https://www.instagram.com/ogniskomuzyczne_dziewiecsil/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="p-2.5 bg-[#2E1E0F] hover:bg-wood-warm text-white transition-all duration-300 rounded-full border border-wood-warm/30 flex items-center justify-center"
